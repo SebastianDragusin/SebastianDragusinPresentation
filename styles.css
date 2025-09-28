@@ -1,0 +1,194 @@
+/* ====== Theme (Neon Futurist) ====== */
+:root{
+  --bg-1: #0b1020;        /* navy very dark */
+  --bg-2: #10162b;        /* indigo dark */
+  --ink: #E6EEF3;         /* text principal */
+  --muted:#9AA7B4;        /* text secundar */
+  --accent:#6C9BFF;       /* electric blue */
+  --accent-2:#B66CFF;     /* violet glint */
+  --soft: rgba(108,155,255,.12);
+  --glass: rgba(255,255,255,.06); /* glass pe dark */
+  --glass-brd: rgba(255,255,255,.12);
+  --ring: rgba(108,155,255,.45);
+  --radius:16px;
+  --shadow: 0 10px 30px rgba(0,0,0,.55), 0 2px 10px rgba(0,0,0,.35);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color:var(--ink);
+  background:
+    radial-gradient(60vw 40vh at 15% -10%, rgba(108,155,255,.20), transparent 60%),
+    radial-gradient(50vw 40vh at 120% 20%, rgba(182,108,255,.16), transparent 60%),
+    linear-gradient(180deg, var(--bg-1), var(--bg-2));
+  line-height:1.6;
+}
+.container{width:min(1100px,92%); margin-inline:auto}
+
+a{color:var(--accent)}
+a:hover{color:#a7c1ff}
+.skip{position:absolute; left:-9999px}
+.skip:focus{left:1rem; top:1rem; background:#1b223b; color:#fff; padding:.6rem 1rem; border-radius:999px; box-shadow:var(--shadow)}
+
+/* ===== NAV + HEADER ===== */
+.site-header{
+  background:
+    radial-gradient(60vw 40vh at 20% -20%, rgba(108,155,255,.18), transparent 60%),
+    radial-gradient(50vw 40vh at 120% 20%, rgba(182,108,255,.14), transparent 60%);
+}
+.nav{display:flex; align-items:center; justify-content:space-between; padding:1rem 0}
+.brand{display:flex; align-items:center; gap:.6rem; text-decoration:none; color:inherit; font-family:Marcellus,serif; font-size:1.2rem}
+.brand em{font-style:normal; color:var(--accent)}
+.logo{width:28px; height:28px; border-radius:50%; background:linear-gradient(135deg, var(--accent), var(--accent-2)); color:#0b1020; display:grid; place-items:center; box-shadow:0 0 0 2px rgba(255,255,255,.08)}
+.nav-toggle{display:none; font-size:1.4rem; background:transparent; border:0; cursor:pointer; color:var(--ink)}
+.nav-list{list-style:none; display:flex; gap:1rem; padding:0; margin:0; align-items:center}
+.nav-list a{color:inherit; text-decoration:none; padding:.5rem .8rem; border-radius:999px}
+.nav-list a:hover{background:rgba(255,255,255,.06)}
+
+/* ===== Buttons ===== */
+.btn{display:inline-flex; align-items:center; justify-content:center; gap:.5rem; padding:.7rem 1.1rem; border-radius:12px; text-decoration:none; border:1px solid transparent; cursor:pointer; transition:.2s}
+.btn-primary{
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color:#0b1020;
+  box-shadow: 0 8px 28px rgba(108,155,255,.35), 0 0 0 1px rgba(255,255,255,.08) inset;
+}
+.btn-primary:hover{ filter:brightness(1.05) }
+.btn-soft{ background: var(--glass); color:var(--ink); border:1px solid var(--glass-brd) }
+
+/* ===== HERO ===== */
+.hero{display:grid; grid-template-columns: 1.2fr .8fr; gap:2rem; align-items:center; padding: clamp(2rem, 6vw, 4rem) 0}
+.kicker{color:var(--muted); margin:0}
+.hero h1{margin:.2rem 0 .6rem; font: 800 clamp(28px,4vw,44px)/1.1 Inter,system-ui}
+.accent{color:#b6caff; text-shadow:0 0 18px rgba(108,155,255,.25)}
+.sub{color:var(--muted)}
+.hero-cta{display:flex; gap:.8rem; margin-top:1rem; flex-wrap:wrap}
+.chips{display:flex; gap:.4rem; padding:0; margin:1rem 0 0; list-style:none; flex-wrap:wrap}
+.chips li{
+  background: var(--glass); border:1px solid var(--glass-brd);
+  padding:.3rem .6rem; border-radius:999px; font-size:.9rem; color:#c9d5e0
+}
+
+.hero-photo{position:relative; border-radius:18px; overflow:hidden; box-shadow:0 18px 50px rgba(0,0,0,.55); background:#121a30}
+.hero-photo::after{content:""; position:absolute; inset:auto 0 -40% 0; height:60%; background: radial-gradient(80% 60% at 50% 10%, rgba(108,155,255,.22), transparent 60%)}
+.hero-photo img{width:100%; height:auto; display:block; object-fit:cover}
+
+/* ===== Sections ===== */
+.section{padding: clamp(2rem,5vw,3.4rem) 0}
+.section h2{font-family:Marcellus,serif; font-weight:400; letter-spacing:.02em; font-size: clamp(24px,3.2vw,36px); margin:0 0 1rem; color:#dfe8f2}
+
+/* ===== Cards ===== */
+.grid{display:grid; gap:1rem}
+.cards{grid-template-columns:repeat(3,1fr)}
+.card{
+  background: var(--glass); backdrop-filter: blur(10px);
+  border:1px solid var(--glass-brd); border-radius:var(--radius); box-shadow: var(--shadow); overflow:hidden
+}
+.card .card-body{padding:1rem}
+.card h3{margin:.2rem 0 .4rem; color:#e5ecf6}
+.card p{margin:.2rem 0 .6rem; color:#a9b6c5}
+.card .tags{display:flex; gap:.4rem; flex-wrap:wrap}
+.card .tags span{background:rgba(108,155,255,.12); border:1px solid rgba(108,155,255,.25); color:#cfe0ff; padding:.25rem .5rem; border-radius:999px; font-size:.85rem}
+.project img{width:100%; height:190px; object-fit:cover; display:block; border-bottom:1px solid var(--glass-brd)}
+.project img.zoomable{cursor:zoom-in}
+
+/* ===== Timeline ===== */
+.timeline{list-style:none; margin:0; padding:0; display:grid; gap:1rem}
+.timeline li{display:grid; grid-template-columns:140px 1fr; gap:1rem; align-items:start}
+.t-year{font-weight:700; color:#b6caff}
+.t-body h3{margin:.2rem 0; color:#e5ecf6}
+.t-body p{color:#a9b6c5}
+
+/* ===== Contact ===== */
+.contact-grid{display:grid; grid-template-columns: 1fr 1fr; gap:1rem}
+.contact-card, .form-card{
+  background: var(--glass); border:1px solid var(--glass-brd); border-radius:var(--radius); padding:1rem; box-shadow: var(--shadow)
+}
+label{display:grid; gap:.3rem; font-size:.95rem}
+input, textarea{
+  border:1px solid var(--glass-brd); border-radius:12px; padding:.7rem .9rem; font:inherit;
+  background: rgba(255,255,255,.04); color: var(--ink)
+}
+input::placeholder, textarea::placeholder{ color:#8fa0b2 }
+input:focus, textarea:focus{ outline:2px solid var(--ring); border-color:transparent }
+
+/* ===== Footer ===== */
+.site-footer{padding:2rem 0; text-align:center; color:#8997a6}
+
+/* ===== Lightbox ===== */
+.lightbox{position:fixed; inset:0; display:none; align-items:center; justify-content:center; background:rgba(0,0,0,.75); z-index:1000; padding:2rem}
+.lightbox.show{display:flex}
+.lightbox img{max-width:min(96vw,1400px); max-height:86vh; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.6)}
+.lightbox-close{
+  position:absolute; top:14px; right:14px; width:42px; height:42px; border-radius:50%;
+  border:0; background:linear-gradient(135deg,#26304a,#1b223b); color:#fff; cursor:pointer; font-size:24px; line-height:1;
+  box-shadow:0 0 0 1px var(--glass-brd), 0 6px 18px rgba(0,0,0,.45)
+}
+
+/* ===== Form UX ===== */
+.form-card{display:grid; gap:1rem; padding-bottom:1.5rem}
+.hidden{position:absolute; left:-9999px}
+
+/* ===== Modal (popup „Mulțumim”) ===== */
+.modal{
+  position: fixed; inset: 0; display: none;
+  align-items: center; justify-content: center; z-index: 1100;
+  background: rgba(10,12,22,.65); backdrop-filter: blur(3px);
+  padding: 1rem;
+}
+.modal.show{ display: flex; }
+.modal-card{
+  background: linear-gradient(180deg,#0f162b,#131b33);
+  border:1px solid var(--glass-brd); border-radius: 16px; box-shadow: 0 20px 50px rgba(0,0,0,.55);
+  width: min(480px, 92%); padding: 1.2rem 1.2rem 1rem; text-align: center; position: relative; color:#e8eff9;
+}
+.modal-card h3{ margin-top: .2rem; font-family: Marcellus, serif; font-weight: 600; color:#dfe6ff }
+.modal-close{
+  position:absolute; right: 10px; top: 10px; width: 36px; height: 36px; border-radius: 50%;
+  border:0; background:#222a45; color:#fff; cursor:pointer; font-size:22px; line-height:1;
+}
+.modal-close:hover{ background:#2b3558; }
+
+/* ===== WhatsApp Floating Button ===== */
+.fab {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 1200;
+  width: 64px; height: 64px; border-radius: 50%;
+  display: grid; place-items: center; line-height: 0; text-decoration: none;
+  box-shadow: 0 16px 30px rgba(0,0,0,.45);
+  transition: transform .25s ease, opacity .25s ease, box-shadow .2s ease;
+  will-change: transform, opacity;
+}
+.fab-whatsapp { background: #25D366; }
+.fab-whatsapp svg { width: 28px; height: 28px; fill: #0b1020; display: block; }
+.fab:hover { box-shadow: 0 20px 40px rgba(0,0,0,.55); transform: translateY(-2px); }
+/* apariție după scroll */
+.fab.hidden { opacity: 0; transform: translateY(12px) scale(.98); pointer-events: none; }
+/* safe-area iPhone */
+@supports (padding: max(0px)) {
+  .fab { right: max(18px, env(safe-area-inset-right)); bottom: max(18px, env(safe-area-inset-bottom)); }
+}
+
+/* ===== Responsive ===== */
+@media (max-width:980px){
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .timeline li{grid-template-columns:120px 1fr}
+}
+@media (max-width:760px){
+  .nav-toggle{display:block}
+  .nav-list{
+    position:absolute; right:4%; top:68px;
+    background: #0f162b; border:1px solid var(--glass-brd); border-radius:14px;
+    padding:.5rem; display:none; flex-direction:column; box-shadow:var(--shadow)
+  }
+  .nav-list a{color:#e8eff9}
+  .nav-list.show{display:flex}
+  .hero{grid-template-columns:1fr; text-align:center}
+  .hero-cta{justify-content:center}
+  .cards{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+}
+

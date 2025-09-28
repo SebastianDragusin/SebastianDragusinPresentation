@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sebastian Dragusin | Programator – Desktop · Web · Mobile · Embedded</title>
+  <meta name="description" content="Portofoliu personal – programator cu 5+ ani experiență. Aplicații desktop, web, mobile și embedded/IoT. Proiecte, tehnologii, contact." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Marcellus&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚙️</text></svg>">
+</head>
+<body>
+  <a class="skip" href="#content">Sari la conținut</a>
+
+  <!-- ======= NAV ======= -->
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="brand" href="#">
+        <span class="logo">⌘</span>
+        <span class="brand-text">Sebastian Dragusin</span>
+      </a>
+      <button class="nav-toggle" aria-label="Deschide meniul" aria-expanded="false">☰</button>
+      <ul class="nav-list">
+        <li><a href="#proiecte">Proiecte</a></li>
+        <li><a href="#servicii">Servicii</a></li>
+        <li><a href="#experienta">Experiență</a></li>
+        <li><a href="#contact" class="btn btn-primary">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- ======= HERO ======= -->
+    <section class="hero container" id="content">
+      <div class="hero-text">
+        <p class="kicker">Programator • 5+ ani</p>
+        <h1>Construiesc aplicații <span class="accent">desktop</span>, <span class="accent">web</span>, <span class="accent">mobile</span> și <span class="accent">embedded</span></h1>
+        <p class="sub">Arhitecturi curate, performanță și UX care contează. End-to-end: analiză, dezvoltare, testare, CI/CD și deploy.</p>
+
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#proiecte">Vezi proiecte</a>
+          <a class="btn btn-soft" href="#contact">Cere ofertă</a>
+        </div>
+
+        <ul class="chips">
+          <li>C#/.NET</li><li>Node/TS</li><li>React</li><li>Android</li><li>Arduino/ESP</li><li>CI/CD</li>
+        </ul>
+      </div>
+
+      <figure class="hero-photo">
+        <img
+          src="assets/my-hero.png"
+          alt="Portret Sebastian Dragusin – programator"
+          width="900" height="600"
+          loading="eager" decoding="async"
+          onerror="this.src='data:image/svg+xml;utf8,<?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?><svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 900 600&quot;><defs><linearGradient id=&quot;g&quot; x1=&quot;0&quot; y1=&quot;0&quot; x2=&quot;1&quot; y2=&quot;1&quot;><stop stop-color=&quot;%2310192d&quot; offset=&quot;0&quot;/><stop stop-color=&quot;%23121b31&quot; offset=&quot;1&quot;/></linearGradient></defs><rect fill=&quot;url(%23g)&quot; width=&quot;900&quot; height=&quot;600&quot;/><text x=&quot;50%&quot; y=&quot;50%&quot; text-anchor=&quot;middle&quot; font-family=&quot;Inter,Arial&quot; font-size=&quot;28&quot; fill=&quot;%23a7b8ff&quot;>assets/my-hero.png lipsă</text></svg>';"
+        >
+      </figure>
+    </section>
+  </header>
+
+  <main>
+    <!-- ======= PROIECTE ======= -->
+    <section id="proiecte" class="section container">
+      <h2>Proiecte selectate</h2>
+      <div class="grid cards">
+        <article class="card project">
+          <img class="zoomable" src="https://picsum.photos/seed/iot/800/500" alt="Dashboard web – preview" loading="lazy">
+          <div class="card-body">
+            <h3>Dashboard IoT & Telemetrie</h3>
+            <p>Stack: Node/TS, WebSockets, React, Postgres. Vizualizare real-time pentru senzori industriali.</p>
+            <div class="tags"><span>Web</span><span>IoT</span><span>Realtime</span></div>
+          </div>
+        </article>
+        <article class="card project">
+          <img class="zoomable" src="https://picsum.photos/seed/mobile/800/500" alt="Aplicație mobilă – preview" loading="lazy">
+          <div class="card-body">
+            <h3>Aplicație mobilă inventar</h3>
+            <p>Android (Kotlin) + API .NET. Scanare coduri, stocuri offline/online, sync sigur.</p>
+            <div class="tags"><span>Mobile</span><span>Android</span><span>Offline</span></div>
+          </div>
+        </article>
+        <article class="card project">
+          <img class="zoomable" src="https://picsum.photos/seed/desktop/800/500" alt="Aplicație desktop – preview" loading="lazy">
+          <div class="card-body">
+            <h3>Desktop CAD helper</h3>
+            <p>C# WPF + plugins CAD. Automatizări, exporturi batch și rapoarte PDF.</p>
+            <div class="tags"><span>Desktop</span><span>.NET</span><span>WPF</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ======= SERVICII ======= -->
+    <section id="servicii" class="section container">
+      <h2>Ce pot livra</h2>
+      <div class="grid cards">
+        <article class="card">
+          <div class="card-body">
+            <h3>Arhitectură & Prototip</h3>
+            <p>Design sistem, alegere stack, POC rapid și roadmap.</p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-body">
+            <h3>Dezvoltare aplicații</h3>
+            <p>Desktop, Web, Mobile, Embedded/IoT. Integrare cu servicii și baze de date.</p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-body">
+            <h3>Calitate & Release</h3>
+            <p>Testare automată, observability, CI/CD, containere, deploy cloud/on-prem.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ======= EXPERIENȚĂ ======= -->
+    <section id="experienta" class="section container">
+      <h2>Experiență</h2>
+      <ul class="timeline">
+        <li>
+          <span class="t-year">2022–prezent</span>
+          <div class="t-body">
+            <h3>Software Engineer – Freelance</h3>
+            <p>Proiecte pentru clienți din producție, retail și evenimente. Focus pe fiabilitate și UX.</p>
+          </div>
+        </li>
+        <li>
+          <span class="t-year">2019–2022</span>
+          <div class="t-body">
+            <h3>Full-stack / Embedded</h3>
+            <p>Soluții integrate: senzori, gateway, backend și UI. Tooling intern & automatizări.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ======= CONTACT (Netlify) ======= -->
+    <section id="contact" class="section container contact">
+      <h2>Contact</h2>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <p><strong>Email:</strong> <a href="mailto:you@mail.com">you@mail.com</a></p>
+          <p><strong>LinkedIn:</strong> <a href="#" target="_blank" rel="noopener">/in/username</a></p>
+          <p><strong>WhatsApp:</strong> <a href="https://wa.me/40700000000" target="_blank" rel="noopener">+40 700 000 000</a></p>
+        </div>
+
+        <!-- Netlify Forms -->
+        <form id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="form-card" autocomplete="on">
+          <input type="hidden" name="form-name" value="contact" />
+          <p class="hidden"><label>Nu completa: <input name="bot-field" /></label></p>
+
+          <label>Nume
+            <input required name="nume" placeholder="Numele tău" autocomplete="name" />
+          </label>
+          <label>Email
+            <input required type="email" name="email" placeholder="adresa@exemplu.com" autocomplete="email" />
+          </label>
+          <label>Mesaj
+            <textarea required name="mesaj" rows="4" placeholder="Scrie-mi despre proiect"></textarea>
+          </label>
+
+          <button class="btn btn-primary" type="submit" id="contactSubmit">Trimite</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <p>© <span id="year"></span> Sebastian Dragusin. Toate drepturile rezervate.</p>
+  </footer>
+
+  <!-- Lightbox (imagini mari) -->
+  <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="Imagine mărită">
+    <button class="lightbox-close" aria-label="Închide">×</button>
+    <img id="lightbox-img" alt="">
+  </div>
+
+  <!-- Popup „Mulțumim” -->
+  <div id="thankyou" class="modal" aria-hidden="true" role="dialog" aria-label="Mulțumim">
+    <div class="modal-card" role="document">
+      <button class="modal-close" aria-label="Închide">×</button>
+      <h3>Mulțumesc! 🎉</h3>
+      <p>Mesajul tău a fost trimis. Revin în scurt timp.</p>
+      <button class="btn btn-primary" id="closeThanks">Închide</button>
+    </div>
+  </div>
+
+  <!-- WhatsApp FAB (vizibil după scroll) -->
+  <a href="https://wa.me/40700000000" class="fab fab-whatsapp hidden"
+     aria-label="Deschide WhatsApp" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" role="img">
+      <path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.6-6C.056 5.207 5.264 0 11.88 0 18.497 0 23.7 5.207 23.7 11.837c0 6.63-5.203 11.837-11.82 11.837a11.9 11.9 0 01-6.209-1.7L.057 24zm6.597-3.807c1.741.995 3.154 1.591 5.267 1.591 5.446 0 9.886-4.434 9.886-9.89 0-5.457-4.44-9.89-9.886-9.89-5.452 0-9.89 4.433-9.89 9.89 0 2.235.654 3.891 1.746 5.555l-.999 3.648 3.876-.995zm11.387-5.464c-.074-.124-.272-.198-.57-.346-.297-.149-1.758-.868-2.03-.967-.272-.099-.47-.149-.669.149-.198.297-.767.967-.94 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.346.446-.519.149-.173.198-.297.297-.495.099-.198.05-.372-.025-.521-.074-.149-.669-1.612-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.288.173-1.413z"></path>
+    </svg>
+  </a>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
