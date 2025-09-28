@@ -25,12 +25,12 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 // Current year
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// Lightbox
+// ===== Lightbox
 const lb = document.getElementById('lightbox');
 const lbImg = document.getElementById('lightbox-img');
 const lbClose = document.querySelector('.lightbox-close');
 
-document.querySelectorAll('img.zoomable').forEach(img => {
+document.querySelectorAll('.gallery img.zoomable, .project img.zoomable').forEach(img => {
   img.addEventListener('click', () => {
     lbImg.src = img.src;
     lbImg.alt = img.alt || '';
@@ -38,63 +38,68 @@ document.querySelectorAll('img.zoomable').forEach(img => {
     lb.setAttribute('aria-hidden', 'false');
   });
 });
-function closeLightbox(){ lb.classList.remove('show'); lb.setAttribute('aria-hidden','true'); lbImg.src=''; }
-lbClose?.addEventListener('click', closeLightbox);
-lb?.addEventListener('click', (e)=>{ if(e.target===lb) closeLightbox(); });
-document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') closeLightbox(); });
 
-// Netlify form + popup
-function encodeForm(data){
-  return Object.keys(data).map(k=>encodeURIComponent(k)+'='+encodeURIComponent(data[k])).join('&');
+function closeLightbox() {
+  lb.classList.remove('show');
+  lb.setAttribute('aria-hidden', 'true');
+  lbImg.src = '';
 }
-const formEl = document.getElementById('contactForm');
-const submitBtn = document.getElementById('contactSubmit');
-const modal = document.getElementById('thankyou');
-const modalClose = document.querySelector('.modal-close');
-const modalClose2 = document.getElementById('closeThanks');
+lbClose?.addEventListener('click', closeLightbox);
+lb?.addEventListener('click', (e) => { if (e.target === lb) closeLightbox(); });
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
 
-function openModal(){ modal.classList.add('show'); modal.setAttribute('aria-hidden','false'); }
-function closeModal(){ modal.classList.remove('show'); modal.setAttribute('aria-hidden','true'); }
+// ===== Netlify Forms + popup
+function encodeForm(data) {
+  return Object.keys(data).map(k => encodeURIComponent(k)+"="+encodeURIComponent(data[k])).join("&");
+}
+const formEl = document.getElementById("contactForm");
+const submitBtn = document.getElementById("contactSubmit");
+const modal = document.getElementById("thankyou");
+const modalClose = document.querySelector(".modal-close");
+const modalClose2 = document.getElementById("closeThanks");
 
-formEl?.addEventListener('submit', async (e)=>{
+function openModal(){ modal.classList.add("show"); modal.setAttribute("aria-hidden","false"); }
+function closeModal(){ modal.classList.remove("show"); modal.setAttribute("aria-hidden","true"); }
+
+formEl?.addEventListener("submit", async (e) => {
   e.preventDefault();
-  if(formEl.querySelector('input[name="bot-field"]')?.value) return;
+  if (formEl.querySelector('input[name="bot-field"]')?.value) return;
 
   submitBtn.disabled = true;
-  submitBtn.textContent = 'Se trimite…';
+  submitBtn.textContent = "Se trimite…";
 
-  const fd = new FormData(formEl);
-  const payload = { 'form-name': formEl.getAttribute('name') };
-  for (const [k,v] of fd.entries()) payload[k]=v;
+  const formData = new FormData(formEl);
+  const payload = { "form-name": formEl.getAttribute("name") };
+  for (const [k, v] of formData.entries()) payload[k] = v;
 
-  try{
-    await fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+  try {
+    await fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encodeForm(payload),
     });
     formEl.reset();
     openModal();
-  }catch(err){
+  } catch (err) {
     console.error(err);
-    alert('Eroare la trimitere. Încearcă din nou.');
-  }finally{
+    alert("Eroare la trimitere. Te rog încearcă din nou.");
+  } finally {
     submitBtn.disabled = false;
-    submitBtn.textContent = 'Trimite';
+    submitBtn.textContent = "Trimite";
   }
 });
+modalClose?.addEventListener("click", closeModal);
+modalClose2?.addEventListener("click", closeModal);
+modal?.addEventListener("click", (e) => { if (e.target === modal) closeModal(); });
+document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeModal(); });
 
-modalClose?.addEventListener('click', closeModal);
-modalClose2?.addEventListener('click', closeModal);
-modal?.addEventListener('click', (e)=>{ if(e.target===modal) closeModal(); });
-document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') closeModal(); });
-
-// WhatsApp FAB: arată după ce derulezi 200px
+// ===== WhatsApp FAB on scroll
 const fab = document.querySelector('.fab-whatsapp');
-function toggleFab() {
+const showAt = 320;
+function onScrollFab(){
   if (!fab) return;
-  if (window.scrollY > 200) fab.classList.remove('hidden');
+  if (window.scrollY > showAt) fab.classList.remove('hidden');
   else fab.classList.add('hidden');
 }
-window.addEventListener('scroll', toggleFab, { passive: true });
-window.addEventListener('load', toggleFab);
+window.addEventListener('scroll', onScrollFab, { passive: true });
+onScrollFab();

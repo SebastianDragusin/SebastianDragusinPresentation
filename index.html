@@ -19,7 +19,7 @@
     <nav class="nav container">
       <a class="brand" href="#">
         <span class="logo">⌘</span>
-        <span class="brand-text">Sebastian Dragusin</span>
+        <span class="brand-text">Sebastian Dragusin <em>Dev</em></span>
       </a>
       <button class="nav-toggle" aria-label="Deschide meniul" aria-expanded="false">☰</button>
       <ul class="nav-list">
@@ -42,19 +42,36 @@
           <a class="btn btn-soft" href="#contact">Cere ofertă</a>
         </div>
 
-        <ul class="chips">
-          <li>C#/.NET</li><li>Node/TS</li><li>React</li><li>Android</li><li>Arduino/ESP</li><li>CI/CD</li>
+        <!-- CHIPS pătrate -->
+        <ul class="chips chips-square">
+          <li>
+            <span class="title">C#/.NET</span>
+            <small class="sub">WPF / Windows Forms / MAUI</small>
+          </li>
+          <li>
+            <span class="title">React / Node</span>
+            <small class="sub">TypeScript • REST/WebSockets</small>
+          </li>
+          <li>
+            <span class="title">Android</span>
+            <small class="sub">Kotlin • Jetpack</small>
+          </li>
+          <li>
+            <span class="title">Arduino / ESP</span>
+            <small class="sub">C/C++ • IoT</small>
+          </li>
+          <li>
+            <span class="title">CI/CD</span>
+            <small class="sub">Docker • GitHub Actions</small>
+          </li>
         </ul>
       </div>
 
       <figure class="hero-photo">
-        <img
-          src="assets/my-hero.png"
-          alt="Portret Sebastian Dragusin – programator"
-          width="900" height="600"
-          loading="eager" decoding="async"
-          onerror="this.src='data:image/svg+xml;utf8,<?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?><svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 900 600&quot;><defs><linearGradient id=&quot;g&quot; x1=&quot;0&quot; y1=&quot;0&quot; x2=&quot;1&quot; y2=&quot;1&quot;><stop stop-color=&quot;%2310192d&quot; offset=&quot;0&quot;/><stop stop-color=&quot;%23121b31&quot; offset=&quot;1&quot;/></linearGradient></defs><rect fill=&quot;url(%23g)&quot; width=&quot;900&quot; height=&quot;600&quot;/><text x=&quot;50%&quot; y=&quot;50%&quot; text-anchor=&quot;middle&quot; font-family=&quot;Inter,Arial&quot; font-size=&quot;28&quot; fill=&quot;%23a7b8ff&quot;>assets/my-hero.png lipsă</text></svg>';"
-        >
+        <img src="assets/my-hero.png"
+             alt="Portret Sebastian Dragusin – programator"
+             loading="eager"
+             onerror="this.src='data:image/svg+xml;utf8,<?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?><svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 900 600&quot;><defs><linearGradient id=&quot;g&quot; x1=&quot;0&quot; y1=&quot;0&quot; x2=&quot;1&quot; y2=&quot;1&quot;><stop stop-color=&quot;%23eaf3f1&quot; offset=&quot;0&quot;/><stop stop-color=&quot;%23f6faf9&quot; offset=&quot;1&quot;/></linearGradient></defs><rect fill=&quot;url(%23g)&quot; width=&quot;900&quot; height=&quot;600&quot;/><text x=&quot;50%&quot; y=&quot;50%&quot; text-anchor=&quot;middle&quot; font-family=&quot;Inter,Arial&quot; font-size=&quot;28&quot; fill=&quot;%232b7d6a&quot;>Adaugă assets/my-hero.png</text></svg>';">
       </figure>
     </section>
   </header>
@@ -64,30 +81,29 @@
     <section id="proiecte" class="section container">
       <h2>Proiecte selectate</h2>
       <div class="grid cards">
+
+        <!-- PROIECT 1: MAGIC MOMENTS -->
         <article class="card project">
-          <img class="zoomable" src="https://picsum.photos/seed/iot/800/500" alt="Dashboard web – preview" loading="lazy">
+          <img class="zoomable"
+               src="assets/magic-moments.png"
+               alt="Magic Moments – landing page evenimente (preview)"
+               loading="lazy">
           <div class="card-body">
-            <h3>Dashboard IoT & Telemetrie</h3>
-            <p>Stack: Node/TS, WebSockets, React, Postgres. Vizualizare real-time pentru senzori industriali.</p>
-            <div class="tags"><span>Web</span><span>IoT</span><span>Realtime</span></div>
+            <h3>
+              <a href="https://magicmomentsro.netlify.app/" target="_blank" rel="noopener">
+                Magic Moments – servicii evenimente
+              </a>
+            </h3>
+            <p>
+              Landing page modern pentru servicii (dansul mirilor, pachete, galerie).
+              Implementare JS vanilla pentru smooth-scroll, lightbox la imagini, popup „Mulțumim”
+              după trimiterea formularului și afișarea butonului WhatsApp după scroll.
+              Formular Netlify (honeypot) + deploy & hosting pe Netlify.
+            </p>
+            <div class="tags"><span>Web</span><span>Landing</span><span>Netlify</span></div>
           </div>
         </article>
-        <article class="card project">
-          <img class="zoomable" src="https://picsum.photos/seed/mobile/800/500" alt="Aplicație mobilă – preview" loading="lazy">
-          <div class="card-body">
-            <h3>Aplicație mobilă inventar</h3>
-            <p>Android (Kotlin) + API .NET. Scanare coduri, stocuri offline/online, sync sigur.</p>
-            <div class="tags"><span>Mobile</span><span>Android</span><span>Offline</span></div>
-          </div>
-        </article>
-        <article class="card project">
-          <img class="zoomable" src="https://picsum.photos/seed/desktop/800/500" alt="Aplicație desktop – preview" loading="lazy">
-          <div class="card-body">
-            <h3>Desktop CAD helper</h3>
-            <p>C# WPF + plugins CAD. Automatizări, exporturi batch și rapoarte PDF.</p>
-            <div class="tags"><span>Desktop</span><span>.NET</span><span>WPF</span></div>
-          </div>
-        </article>
+
       </div>
     </section>
 
@@ -121,17 +137,24 @@
       <h2>Experiență</h2>
       <ul class="timeline">
         <li>
-          <span class="t-year">2022–prezent</span>
+          <span class="t-year">2025–prezent</span>
           <div class="t-body">
             <h3>Software Engineer – Freelance</h3>
-            <p>Proiecte pentru clienți din producție, retail și evenimente. Focus pe fiabilitate și UX.</p>
+            <p>Proiecte pe desktop/web/mobile/embedded. Livrare end-to-end, accent pe UX și fiabilitate.</p>
           </div>
         </li>
         <li>
-          <span class="t-year">2019–2022</span>
+          <span class="t-year">2022–2025</span>
           <div class="t-body">
-            <h3>Full-stack / Embedded</h3>
-            <p>Soluții integrate: senzori, gateway, backend și UI. Tooling intern & automatizări.</p>
+            <h3>Full-stack (desktop + server)</h3>
+            <p>Aplicații desktop .NET + servicii backend Node/.NET, baze de date și CI/CD.</p>
+          </div>
+        </li>
+        <li>
+          <span class="t-year">2020–2022</span>
+          <div class="t-body">
+            <h3>Embedded / Desktop Developer</h3>
+            <p>Integrare senzori, firmware Arduino/ESP, tool-uri desktop .NET, automatizări.</p>
           </div>
         </li>
       </ul>
@@ -142,9 +165,26 @@
       <h2>Contact</h2>
       <div class="contact-grid">
         <div class="contact-card">
-          <p><strong>Email:</strong> <a href="mailto:you@mail.com">you@mail.com</a></p>
-          <p><strong>LinkedIn:</strong> <a href="#" target="_blank" rel="noopener">/in/username</a></p>
-          <p><strong>WhatsApp:</strong> <a href="https://wa.me/40700000000" target="_blank" rel="noopener">+40 700 000 000</a></p>
+          <ul class="contact-list">
+            <li>
+              <span class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M4 6h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m22 8-10 7L2 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <a href="mailto:dragusin.sebi@yahoo.com">dragusin.sebi@yahoo.com</a>
+            </li>
+            <li>
+              <span class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5ZM.5 8.5h4V23h-4V8.5Zm7 0h3.8v2h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V23h-4v-5.8c0-1.38-.02-3.17-1.93-3.17-1.93 0-2.23 1.5-2.23 3.06V23h-4V8.5Z" fill="currentColor"/></svg>
+              </span>
+              <a href="https://www.linkedin.com/in/sebastian-dragusin-015332211/" target="_blank" rel="noopener">/in/sebastian-dragusin</a>
+            </li>
+            <li>
+              <span class="icon" aria-hidden="true">
+                <svg viewBox="0 0 32 32"><path d="M19.11 17.53c-.32-.16-1.88-.93-2.17-1.04-.29-.11-.5-.16-.72.16-.21.32-.83 1.04-1.02 1.25-.19.2-.38.23-.7.08-.32-.16-1.34-.49-2.55-1.56-.94-.83-1.58-1.85-1.77-2.17-.19-.32-.02-.49.14-.65.14-.14.32-.36.48-.54.16-.19.21-.32.32-.54.11-.22.05-.41-.03-.57-.08-.16-.72-1.73-.98-2.37-.26-.62-.52-.54-.72-.55h-.62c-.22 0-.56.08-.85.41-.29.32-1.12 1.09-1.12 2.65 0 1.56 1.15 3.07 1.31 3.28.16.22 2.26 3.45 5.47 4.84.76.33 1.35.53 1.81.68.76.24 1.45.2 2 .12.61-.09 1.88-.77 2.14-1.51.26-.74.26-1.37.18-1.51-.08-.14-.3-.22-.62-.38zM16.01 3.2c-7.05 0-12.78 5.73-12.78 12.78 0 2.25.59 4.37 1.63 6.2L3 29l7-1.84c1.76.96 3.77 1.5 5.9 1.5 7.05 0 12.78-5.73 12.78-12.78S23.06 3.2 16.01 3.2z" fill="currentColor"/></svg>
+              </span>
+              <a href="https://wa.me/40XXXXXXXXX" target="_blank" rel="noopener">+40 xxx xxx xxx</a>
+            </li>
+          </ul>
         </div>
 
         <!-- Netlify Forms -->
@@ -172,7 +212,7 @@
     <p>© <span id="year"></span> Sebastian Dragusin. Toate drepturile rezervate.</p>
   </footer>
 
-  <!-- Lightbox (imagini mari) -->
+  <!-- Lightbox -->
   <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="Imagine mărită">
     <button class="lightbox-close" aria-label="Închide">×</button>
     <img id="lightbox-img" alt="">
@@ -188,8 +228,8 @@
     </div>
   </div>
 
-  <!-- WhatsApp FAB (vizibil după scroll) -->
-  <a href="https://wa.me/40700000000" class="fab fab-whatsapp hidden"
+  <!-- WhatsApp FAB -->
+  <a href="https://wa.me/40XXXXXXXXX" class="fab fab-whatsapp hidden"
      aria-label="Deschide WhatsApp" target="_blank" rel="noopener">
     <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" role="img">
       <path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.6-6C.056 5.207 5.264 0 11.88 0 18.497 0 23.7 5.207 23.7 11.837c0 6.63-5.203 11.837-11.82 11.837a11.9 11.9 0 01-6.209-1.7L.057 24zm6.597-3.807c1.741.995 3.154 1.591 5.267 1.591 5.446 0 9.886-4.434 9.886-9.89 0-5.457-4.44-9.89-9.886-9.89-5.452 0-9.89 4.433-9.89 9.89 0 2.235.654 3.891 1.746 5.555l-.999 3.648 3.876-.995zm11.387-5.464c-.074-.124-.272-.198-.57-.346-.297-.149-1.758-.868-2.03-.967-.272-.099-.47-.149-.669.149-.198.297-.767.967-.94 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.346.446-.519.149-.173.198-.297.297-.495.099-.198.05-.372-.025-.521-.074-.149-.669-1.612-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.288.173-1.413z"></path>
